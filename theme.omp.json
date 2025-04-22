@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+	    {
+          "background": "#a53030",
+          "foreground": "#ebede9",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": "\uf489 {{ .Name }}",
+          "trailing_diamond": "<transparent,#a53030>\ue0b2</>",
+          "type": "shell"
+      },
+	    {
+          "background": "#be772b",
+          "foreground": "#ebede9",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": "\ue266 MEM: {{ round .PhysicalPercentUsed .Precision }}%",
+          "trailing_diamond": "<transparent,#be772b>\ue0b2</>",
+	        "type": "sysinfo"
+      },
+      {
+        "background": "#75a743",
+        "foreground": "#ebede9",
+        "leading_diamond": "\ue0b2",
+        "powerline_symbol": "\ue0b0",
+        "properties": {
+          "style": "agnoster"
+        },
+        "style": "diamond",
+        "template": " \ue5ff {{ .Path }} ",
+        "trailing_diamond": "<transparent,#75a743>\ue0b2</>",
+  "type": "path"
+      },
+      {
+        "type": "executiontime",
+        "style": "diamond",
+        "leading_diamond": "\ue0b2",
+        "trailing_diamond": "\ue0b4",
+        "foreground": "#ebede9",
+        "background": "#4f8fba",
+        "template": " <#fefefe></> {{ .FormattedMs }}",
+        "properties": {
+          "threshold": 500,
+          "style": "austin",
+          "always_enabled": true
+        }
+      }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
